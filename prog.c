@@ -1,12 +1,10 @@
 #include <stdio.h>
-void ctest2(int *);
+#include "prog.h"
 
 int main()
 {
-	   int x;
-	      ctest2(&x);
-		     printf("Valx=%d\n",x);
-
-			    return 0;
-				
+	int x;
+	ctest2(&x);
+	printf("Valx=%d\n",x);
+	return 0;
 }
