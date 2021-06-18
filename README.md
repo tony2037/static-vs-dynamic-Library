@@ -17,3 +17,7 @@ gcc src-file.c -lm -lpthread
 ```
 The libraries referenced in this example for inclusion during linking are the math library ("m") and the thread library ("pthread"). They are found in /usr/lib/libm.a and /usr/lib/libpthread.a.
 Note: The GNU compiler now has the command line option "-pthread" while older versions of the compiler specify the pthread library explicitly with "-lpthread". Thus now you are more likely to see gcc src-file.c -lm -pthread
+
+
+## Reference
+* http://www.yolinux.com/TUTORIALS/LibraryArchives-StaticAndDynamic.html
