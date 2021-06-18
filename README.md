@@ -20,4 +20,8 @@ Note: The GNU compiler now has the command line option "-pthread" while older ve
 
 
 ## Reference
+* https://stackoverflow.com/questions/9809213/what-are-a-and-so-files
+* https://unix.stackexchange.com/questions/525978/why-doesnt-objdump-display-any-entries-for-the-got-section-of-the-elf-binary
+* https://stackoverflow.com/questions/34732/how-do-i-list-the-symbols-in-a-so-file
+* https://gcc.gnu.org/onlinedocs/gcc/Link-Options.html
 * http://www.yolinux.com/TUTORIALS/LibraryArchives-StaticAndDynamic.html
