@@ -5,6 +5,7 @@
 -shared: Produce a shared object which can then be linked with other objects to form an executable.
 -Wl,options: Pass options to linker.
 In this example the options to be passed on to the linker are: "-soname libctest.so.1". The name passed with the "-o" option is passed to gcc.
+-rpath=dir:  Add a directory to the runtime library search path.
 Option -o: Output of operation. In this case the name of the shared object to be output will be "libctest.so.1.0"
 
 

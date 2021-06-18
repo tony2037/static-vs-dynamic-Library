@@ -10,18 +10,19 @@ EXE= prog
 
 .PHONY: all clean
 
-all: $(EXE_1) $(EXE_2)
+all: $(EXE)
 
 $(OBJS): %.o:%.c
 	$(CC) $(CFLAGS) -c -o $@ $^
 
 $(_LIB): $(OBJS)
 	$(CC) -shared -Wl,-soname, -o $@ $^
-	 ln -sf $@ /opt/lib/libctest.so
+	# FIXME:  This should be ln -sf $@ /opt/lib/libctest.so
+	 ln -sf $@ ./libctest.so
 
-$(EXE): $(OBJS)
-	$(CC) -Wall -L./ prog.c -l$(_LIB_NAME) -o $@
+$(EXE): $(OBJS) $(_LIB)
+	$(CC) -Wall -L./ prog.c -l$(_LIB_NAME) -Wl,-rpath,./ -o $@
 
 
 clean:
-	$(RM) *.o *.so* $(EXE_1) $(EXE_2)
+	$(RM) *.o *.so* $(EXE)
